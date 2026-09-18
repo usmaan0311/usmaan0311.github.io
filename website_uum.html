@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usman Ul Muazzam | Research Portfolio</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Merriweather', 'serif'],
+                    },
+                    colors: {
+                        navy: {
+                            50: '#f0f4f8',
+                            100: '#d9e2ec',
+                            500: '#334e68',
+                            700: '#243b53',
+                            800: '#102a43',
+                            900: '#0a192f', // Deep academic navy
+                        },
+                        accent: '#38bdf8', // Light blue for subtle highlights
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom styles for the article reader */
+        .prose p { margin-bottom: 1.25rem; line-height: 1.75; }
+        .prose h2 { font-size: 1.5rem; font-weight: 700; margin-top: 2rem; margin-bottom: 1rem; color: #102a43; }
+        .prose ul { list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1.25rem; }
+        
+        /* Smooth fade transition utility */
+        .fade-in { animation: fadeIn 0.4s ease-in-out; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body class="bg-gray-50 text-slate-800 font-sans antialiased min-h-screen flex flex-col">
+
+    <nav class="bg-navy-900 text-white sticky top-0 z-50 shadow-md">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-full bg-accent flex items-center justify-center text-navy-900 font-bold text-sm">UM</div>
+                    <span class="font-semibold text-lg tracking-wide hidden sm:block">Usman Ul Muazzam</span>
+                </div>
+                <div class="flex space-x-4">
+                    <button onclick="switchTab('profile')" id="nav-profile" class="px-3 py-2 rounded-md text-sm font-medium bg-navy-700 text-white transition-colors duration-200">Profile</button>
+                    <button onclick="switchTab('writeups')" id="nav-writeups" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:bg-navy-700 hover:text-white transition-colors duration-200">Tech Writeups</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        
+        <!-- ========================================== -->
+        <!-- TAB 1: PROFILE VIEW                        -->
+        <!-- ========================================== -->
+        <div id="view-profile" class="fade-in space-y-12">
+            
+            <section class="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 md:p-12 flex flex-col md:flex-row items-center gap-8 relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-64 h-64 bg-accent/5 rounded-full blur-3xl -mr-20 -mt-20"></div>
+                <div class="flex-shrink-0">
+                    <img src="https://placehold.co/400x400/102a43/ffffff?text=UM" alt="Usman Ul Muazzam" class="w-40 h-40 md:w-48 md:h-48 rounded-full object-cover border-4 border-white shadow-lg z-10 relative">
+                </div>
+                <div class="text-center md:text-left z-10">
+                    <h1 class="text-3xl md:text-5xl font-bold text-navy-900 tracking-tight mb-2">Usman Ul Muazzam</h1>
+                    <p class="text-lg md:text-xl text-accent font-medium mb-4">Research Associate @ University of Birmingham</p>
+                    <p class="text-slate-600 max-w-2xl leading-relaxed">
+                        Specializing in epitaxial deposition of Ultra-widebandgap semiconductors, with a primary focus on the <strong>(Ga,Al)₂O₃ system</strong>. My research integrates advanced thermodynamic and kinetic modeling with hands-on material synthesis and device processing to push the boundaries of next-generation optoelectronics and high-power devices.
+                    </p>
+                    <div class="mt-6 flex gap-4 justify-center md:justify-start">
+                        <a href="mailto:contact@example.com" class="text-slate-400 hover:text-navy-900 transition"><i class="fa-solid fa-envelope text-xl"></i></a>
+                        <a href="#" class="text-slate-400 hover:text-navy-900 transition"><i class="fa-brands fa-linkedin text-xl"></i></a>
+                        <a href="#" class="text-slate-400 hover:text-navy-900 transition"><i class="fa-brands fa-github text-xl"></i></a>
+                        <a href="#" class="text-slate-400 hover:text-navy-900 transition"><i class="fa-solid fa-graduation-cap text-xl"></i></a>
+                    </div>
+                </div>
+            </section>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                
+                <!-- Left Column (Span 2) -->
+                <div class="lg:col-span-2 space-y-8">
+                    <!-- Experience -->
+                    <section>
+                        <h2 class="text-2xl font-bold text-navy-900 mb-6 flex items-center gap-2"><i class="fa-solid fa-briefcase text-accent"></i> Experience</h2>
+                        <div class="space-y-6 relative border-l-2 border-gray-200 ml-3 pl-6">
+                            <div class="relative">
+                                <div class="absolute -left-[33px] top-1 w-4 h-4 rounded-full bg-accent border-4 border-white"></div>
+                                <h3 class="text-lg font-bold text-navy-800">Research Associate</h3>
+                                <p class="text-sm font-medium text-accent mb-2">University of Birmingham | Present</p>
+                                <p class="text-slate-600 text-sm">Focusing on advanced thermodynamic modeling and epitaxial growth strategies for (Ga,Al)₂O₃ based ultra-widebandgap semiconductor systems.</p>
+                            </div>
+                            <div class="relative">
+                                <div class="absolute -left-[33px] top-1 w-4 h-4 rounded-full bg-gray-300 border-4 border-white"></div>
+                                <h3 class="text-lg font-bold text-navy-800">Postdoctoral Research Associate</h3>
+                                <p class="text-sm font-medium text-slate-500 mb-2">Center for Device Thermography and Reliability, University of Bristol | Past/Concurrent</p>
+                                <p class="text-slate-600 text-sm">Conducted comprehensive reliability testing and thermal analysis of widebandgap devices, linking physical characterization with theoretical models.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Education -->
+                    <section>
+                        <h2 class="text-2xl font-bold text-navy-900 mb-6 flex items-center gap-2"><i class="fa-solid fa-building-columns text-accent"></i> Education</h2>
+                        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-lg bg-navy-50 flex items-center justify-center flex-shrink-0 text-navy-700">
+                                <i class="fa-solid fa-microscope text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-navy-800">Ph.D. in Nanoscience and Engineering</h3>
+                                <p class="text-slate-500 font-medium">Indian Institute of Science (IISc), Bangalore</p>
+                                <p class="text-slate-600 text-sm mt-2">Dissertation focused on fundamental growth mechanisms, nanoscale characterization, and thermodynamic modeling of widebandgap materials.</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Right Column (Span 1) -->
+                <div class="space-y-8">
+                    <!-- Skills & Expertise -->
+                    <section class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 h-full">
+                        <h2 class="text-xl font-bold text-navy-900 mb-6 flex items-center gap-2"><i class="fa-solid fa-layer-group text-accent"></i> Expertise</h2>
+                        
+                        <div class="space-y-5">
+                            <div>
+                                <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Epitaxy</h4>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-3 py-1 bg-navy-50 text-navy-700 rounded-md text-sm font-medium border border-navy-100">MOCVD</span>
+                                    <span class="px-3 py-1 bg-navy-50 text-navy-700 rounded-md text-sm font-medium border border-navy-100">mist-CVD</span>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Device Processing</h4>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-3 py-1 bg-slate-50 text-slate-700 rounded-md text-sm font-medium border border-slate-200">MSM Photodetectors</span>
+                                    <span class="px-3 py-1 bg-slate-50 text-slate-700 rounded-md text-sm font-medium border border-slate-200">Cleanroom Fab</span>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Characterization</h4>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-md text-sm font-medium border border-blue-100">HRXRD</span>
+                                    <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-md text-sm font-medium border border-blue-100">AFM</span>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Thermodynamic Modeling</h4>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-3 py-1 bg-emerald-50 text-emerald-700 rounded-md text-sm font-medium border border-emerald-100">Molecular Dynamics</span>
+                                    <span class="px-3 py-1 bg-emerald-50 text-emerald-700 rounded-md text-sm font-medium border border-emerald-100">LAMMPS</span>
+                                    <span class="px-3 py-1 bg-emerald-50 text-emerald-700 rounded-md text-sm font-medium border border-emerald-100">ReaxFF</span>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Software & Languages</h4>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-3 py-1 bg-purple-50 text-purple-700 rounded-md text-sm font-medium border border-purple-100">Python (SciPy, Pandas)</span>
+                                    <span class="px-3 py-1 bg-purple-50 text-purple-700 rounded-md text-sm font-medium border border-purple-100">LaTeX</span>
+                                    <span class="px-3 py-1 bg-purple-50 text-purple-700 rounded-md text-sm font-medium border border-purple-100">Blender (3D)</span>
+                                    <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-md text-sm font-medium">English</span>
+                                    <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-md text-sm font-medium">Hindi</span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <section class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Publications -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 border-t-4 border-t-navy-800">
+                    <h2 class="text-xl font-bold text-navy-900 mb-4 flex items-center gap-2"><i class="fa-solid fa-book-open text-accent"></i> Selected Publications</h2>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-file-lines text-slate-300 mt-1"></i>
+                            <div>
+                                <p class="text-navy-800 font-semibold leading-snug">Role of gallium supersaturation in controlling the heteroepitaxial growth of beta-Ga₂O₃ on 4H-SiC</p>
+                                <p class="text-sm text-slate-500 mt-1">ACS Crystal Growth & Design (2026)</p>
+                            </div>
+                        </li>
+                        <!-- Add more here -->
+                    </ul>
+                </div>
+
+                <!-- Conferences -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 border-t-4 border-t-accent">
+                    <h2 class="text-xl font-bold text-navy-900 mb-4 flex items-center gap-2"><i class="fa-solid fa-microphone-lines text-accent"></i> Presentations</h2>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-comment-dots text-slate-300 mt-1"></i>
+                            <div>
+                                <p class="text-navy-800 font-semibold leading-snug">Understanding Epitaxial Growth Mechanism: MOCVD of Ga₂O₃ on 4H-SiC</p>
+                                <p class="text-sm text-slate-500 mt-1">Physics Research Day, University of Bristol (2026)</p>
+                            </div>
+                        </li>
+                        <!-- Add more here -->
+                    </ul>
+                </div>
+            </section>
+        </div>
+
+        <!-- ========================================== -->
+        <!-- TAB 2: TECH WRITEUPS (GRID)                -->
+        <!-- ========================================== -->
+        <div id="view-writeups" class="hidden fade-in space-y-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <h2 class="text-3xl font-bold text-navy-900 mb-4">Research & Tech Writeups</h2>
+                <p class="text-slate-600">Deep dives into thermodynamic modeling, ultra-widebandgap semiconductors, and the technology behind epitaxial growth.</p>
+            </div>
+            
+            <!-- Grid container populated by JavaScript -->
+            <div id="articles-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Cards inject here -->
+            </div>
+        </div>
+
+        <!-- ========================================== -->
+        <!-- READER VIEW (SINGLE ARTICLE)               -->
+        <!-- ========================================== -->
+        <div id="view-reader" class="hidden fade-in max-w-3xl mx-auto bg-white p-8 md:p-12 rounded-2xl shadow-sm border border-gray-100">
+            <button onclick="closeReader()" class="mb-8 flex items-center gap-2 text-slate-500 hover:text-navy-900 transition font-medium text-sm">
+                <i class="fa-solid fa-arrow-left"></i> Back to all writeups
+            </button>
+            
+            <header class="mb-10">
+                <div class="flex items-center gap-3 text-sm text-accent font-semibold mb-3">
+                    <span id="reader-category">Materials Science</span>
+                    <span class="text-slate-300">•</span>
+                    <span id="reader-date" class="text-slate-500 font-normal">Sep 2026</span>
+                </div>
+                <h1 id="reader-title" class="text-3xl md:text-4xl font-bold text-navy-900 font-serif leading-tight">Article Title</h1>
+            </header>
+            
+            <!-- Article content injected here -->
+            <article id="reader-content" class="prose font-serif text-slate-700 text-lg">
+                <!-- Content -->
+            </article>
+        </div>
+
+    </main>
+
+    <footer class="bg-navy-900 py-8 mt-auto text-center border-t border-navy-800">
+        <p class="text-slate-400 text-sm">&copy; 2026 Usman Ul Muazzam. Built for the academic community.</p>
+    </footer>
+
+    <script>
+        // ==========================================
+        // CONTENT DATABASE: ADD YOUR NEW ARTICLES HERE
+        // ==========================================
+        // To add a new article, simply copy an existing block { ... }, 
+        // change the id, title, date, summary, and write your content in HTML format.
+        
+        const articles = [
+            {
+                id: 1,
+                title: "Thermodynamics of Ga₂O₃ Epitaxy Explained",
+                date: "September 15, 2026",
+                category: "Thermodynamic Modeling",
+                summary: "A breakdown of how modeling gallium supersaturation helps predict and control the growth rate and phase purity of beta-Ga₂O₃ on silicon carbide substrates.",
+                content: `
+                    <p>Epitaxial growth of ultra-widebandgap materials like beta-Ga₂O₃ presents unique challenges, primarily due to complex gas-phase and surface kinetics. In this post, we explore the thermodynamic underpinnings that govern these processes.</p>
+                    <h2>The Role of Supersaturation</h2>
+                    <p>During Metal-Organic Chemical Vapor Deposition (MOCVD), the driving force for epitaxy is the supersaturation of the precursor gases. In the (Ga,Al)₂O₃ system, controlling the partial pressure of Gallium precursors relative to Oxygen is critical.</p>
+                    <p>Using tools like LAMMPS and ReaxFF, we can run molecular dynamics simulations that provide atomic-level insights into how adatoms behave on the 4H-SiC substrate surface.</p>
+                    <ul>
+                        <li><strong>High supersaturation:</strong> Promotes rapid nucleation but can lead to phase mixing.</li>
+                        <li><strong>Low supersaturation:</strong> Slower growth, but higher crystalline quality.</li>
+                    </ul>
+                    <h2>Future Outlook</h2>
+                    <p>By refining our thermodynamic models, we can minimize defects and pave the way for high-power, high-frequency devices that drastically outperform current silicon technologies.</p>
+                `
+            },
+            {
+                id: 2,
+                title: "Recent Trends in Deep-UV Optoelectronics",
+                date: "August 22, 2026",
+                category: "Optoelectronics",
+                summary: "Exploring the shift towards ultra-widebandgap semiconductors for deep-UV applications and the fabrication challenges of MSM photodetectors.",
+                content: `
+                    <p>Deep-ultraviolet (DUV) photodetectors are crucial for applications ranging from secure space communications to flame detection and environmental monitoring. The conventional materials are hitting their performance limits, prompting a shift toward Ultra-Widebandgap (UWBG) materials.</p>
+                    <h2>Why (Ga,Al)₂O₃?</h2>
+                    <p>The tunability of the bandgap in the (Ga,Al)₂O₃ system (ranging from ~4.9 eV for pure Ga₂O₃ to over 8 eV for pure Al₂O₃) makes it an exceptional candidate for solar-blind DUV detectors.</p>
+                    <h2>Device Processing Challenges</h2>
+                    <p>Fabricating Metal-Semiconductor-Metal (MSM) photodetectors in a cleanroom environment involves precise photolithography and metallization. However, creating reliable Ohmic and Schottky contacts on UWBG materials remains an active area of research due to the high work function requirements and surface states.</p>
+                    <p>Through careful mist-CVD growth and subsequent annealing processes, we are observing significant improvements in dark current reduction and responsivity.</p>
+                `
+            },
+            {
+                id: 3,
+                title: "Setting up LAMMPS for ReaxFF Simulations",
+                date: "July 10, 2026",
+                category: "Tutorial / Software",
+                summary: "A quick guide on configuring LAMMPS to simulate chemical reactions during the epitaxial deposition process using ReaxFF.",
+                content: `
+                    <p>For researchers transitioning into computational materials science, setting up Molecular Dynamics (MD) environments can be daunting. Here is my workflow for setting up LAMMPS specifically for reactive force fields (ReaxFF).</p>
+                    <h2>1. Compiling LAMMPS</h2>
+                    <p>Ensure you compile LAMMPS with the <code>REAXFF</code> package included. If you are using Python for data extraction, I highly recommend building the shared library to use the LAMMPS Python module.</p>
+                    <h2>2. Defining the Simulation Box</h2>
+                    <p>When simulating epitaxial growth on 4H-SiC, your initial lattice configuration must precisely match the experimental substrate orientation. I usually generate the initial data file using a custom Python script leveraging the Atomic Simulation Environment (ASE) library.</p>
+                    <h2>3. Heating and Equilibration</h2>
+                    <p>Growth temperatures in MOCVD are high. Use an NPT ensemble to equilibrate the substrate at the target temperature before introducing the precursor molecules via the <code>fix deposit</code> command.</p>
+                `
+            }
+        ];
+
+        // ==========================================
+        // UI INTERACTION LOGIC
+        // ==========================================
+
+        // DOM Elements
+        const viewProfile = document.getElementById('view-profile');
+        const viewWriteups = document.getElementById('view-writeups');
+        const viewReader = document.getElementById('view-reader');
+        const navProfile = document.getElementById('nav-profile');
+        const navWriteups = document.getElementById('nav-writeups');
+        const articlesGrid = document.getElementById('articles-grid');
+
+        // Function to switch main tabs
+        function switchTab(tabId) {
+            // Reset Views
+            viewProfile.classList.add('hidden');
+            viewWriteups.classList.add('hidden');
+            viewReader.classList.add('hidden');
+            
+            // Reset Nav Styles
+            navProfile.className = 'px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:bg-navy-700 hover:text-white transition-colors duration-200';
+            navWriteups.className = 'px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:bg-navy-700 hover:text-white transition-colors duration-200';
+
+            if (tabId === 'profile') {
+                viewProfile.classList.remove('hidden');
+                navProfile.className = 'px-3 py-2 rounded-md text-sm font-medium bg-navy-700 text-white transition-colors duration-200';
+            } else if (tabId === 'writeups') {
+                viewWriteups.classList.remove('hidden');
+                navWriteups.className = 'px-3 py-2 rounded-md text-sm font-medium bg-navy-700 text-white transition-colors duration-200';
+                renderArticlesGrid();
+            }
+            window.scrollTo(0, 0);
+        }
+
+        // Function to render the grid of article cards
+        function renderArticlesGrid() {
+            articlesGrid.innerHTML = ''; // Clear existing
+            articles.forEach(article => {
+                const card = document.createElement('div');
+                card.className = 'bg-white rounded-xl shadow-sm border border-gray-100 p-6 hover:shadow-md transition-shadow duration-300 cursor-pointer flex flex-col h-full group';
+                card.onclick = () => openReader(article.id);
+                
+                card.innerHTML = `
+                    <div class="text-xs font-bold text-accent mb-2 uppercase tracking-wide">${article.category}</div>
+                    <h3 class="text-xl font-bold text-navy-900 mb-3 group-hover:text-accent transition-colors">${article.title}</h3>
+                    <p class="text-slate-600 text-sm flex-grow mb-4 line-clamp-3">${article.summary}</p>
+                    <div class="flex items-center justify-between text-sm mt-auto pt-4 border-t border-gray-50">
+                        <span class="text-slate-400"><i class="fa-regular fa-calendar mr-1"></i> ${article.date}</span>
+                        <span class="text-navy-700 font-medium group-hover:translate-x-1 transition-transform">Read <i class="fa-solid fa-arrow-right ml-1"></i></span>
+                    </div>
+                `;
+                articlesGrid.appendChild(card);
+            });
+        }
+
+        // Function to open a specific article in the reader
+        function openReader(id) {
+            const article = articles.find(a => a.id === id);
+            if (!article) return;
+
+            // Populate content
+            document.getElementById('reader-title').textContent = article.title;
+            document.getElementById('reader-category').textContent = article.category;
+            document.getElementById('reader-date').textContent = article.date;
+            document.getElementById('reader-content').innerHTML = article.content;
+
+            // Switch views
+            viewWriteups.classList.add('hidden');
+            viewReader.classList.remove('hidden');
+            window.scrollTo(0, 0);
+        }
+
+        // Function to close reader and go back to grid
+        function closeReader() {
+            viewReader.classList.add('hidden');
+            viewWriteups.classList.remove('hidden');
+            window.scrollTo(0, 0);
+        }
+
+        // Initialize grid on load (hidden initially, but ready)
+        renderArticlesGrid();
+
+    </script>
+</body>
+</html>
